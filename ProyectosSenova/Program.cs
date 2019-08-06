@@ -14,11 +14,14 @@ namespace ProyectosSenova
             Proyecto miProyecto3 = new Proyecto();
             Proyecto miProyecto4 = new Proyecto("Realidad aumentada",12540,"sistemas",10);
             Proyecto miProyecto5 = new Proyecto("Talento Humano", 5);
+            Proyecto miProyecto6 = new Proyecto("Contabilidad", 6);
+
 
             // miProyecto3.IngresarProyecto();
             // miProyecto3.ImprimirProyecto();
             //miProyecto4.ImprimirProyecto();
-            miProyecto5.ImprimirProyecto();
+            //miProyecto5.ImprimirProyecto();
+            miProyecto6.ImprimirProyecto();
 
 
 
