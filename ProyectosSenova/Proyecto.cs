@@ -7,10 +7,11 @@ namespace ProyectosSenova
     public class Proyecto
        
     {
-        #region Atrubutos
-
+        #region Atributos
+        public List<Proyecto> proyectos = new List<Proyecto>();//definicion lista
         #endregion
         #region Propiedades
+        //prop
         public string Nombre { get; set; }
         public double Codigo { get; set; }
         public string Area { get; set; }
@@ -38,25 +39,52 @@ namespace ProyectosSenova
         #endregion
 
         #region Metodos
+        public void ObtenerMayores(int x)
+        {
+    List<Proyecto> pro20 = new List<Proyecto>();
+            foreach (var item in proyectos)
+            {
+                if (item.Codigo>x)
+                {
+              pro20.Add(item);
+                }
+            }
+            ImprimirProyecto(pro20);
+        }
         public void IngresarProyecto()
         {
-            Console.WriteLine("Ingrese el nombre del proyecto: ");
-            Nombre = Console.ReadLine();
-            Console.WriteLine("Ingrese el codigo: ");
-            Codigo = double.Parse(Console.ReadLine());
-            Console.WriteLine("Ingrese el Area del proyecto: ");
-            Area = Console.ReadLine();
-            Console.WriteLine("Ingrese la duracion del proyecto: ");
-            Duracion =  int.Parse(Console.ReadLine());
+            var res = "y";
+            while (res=="y")
+            {
+                Proyecto miproyecto = new Proyecto();
+                Console.WriteLine("Ingrese el nombre del proyecto: ");
+                miproyecto.Nombre = Console.ReadLine();
+                Console.WriteLine("Ingrese el codigo: ");
+                miproyecto.Codigo = double.Parse(Console.ReadLine());
+                Console.WriteLine("Ingrese el Area del proyecto: ");
+                miproyecto.Area = Console.ReadLine();
+                Console.WriteLine("Ingrese la duracion del proyecto: ");
+                miproyecto.Duracion = int.Parse(Console.ReadLine());
+                proyectos.Add(miproyecto);
+                Console.WriteLine("desea agregar un nuevo proyecto");
+                res = Console.ReadLine();
+
+            }
+       
 
         }
 
-       public void ImprimirProyecto()
+       public void ImprimirProyecto(List<Proyecto>proyecto1)
         {
-            Console.WriteLine($" Nombre: {Nombre}");
-            Console.WriteLine($" Codigo: {Codigo}");
-            Console.WriteLine($" Area: {Area}");
-            Console.WriteLine($" Duracion: {Duracion}");
+            foreach (var item in proyecto1)
+            {
+                Console.WriteLine($" Nombre: { item.Nombre}");
+                Console.WriteLine($" Codigo: {item.Codigo}");
+                Console.WriteLine($" Area: {item.Area}");
+                Console.WriteLine($" Duracion: {item.Duracion}");
+            }
+
+           
         }
         #endregion
     }

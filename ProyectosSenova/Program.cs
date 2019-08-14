@@ -1,27 +1,44 @@
-﻿using System;
-
+﻿
+//obtener todos los proyectos cuyo codigo sea numero mayor a 20 y sea par
+//ordenar los proyectos ascendentemente por duracion
+//seleccionar el primer proyecto que sea multiplo de 6
+//listar solo las areas de los proyectos
+//seleccionar los proyectos solo con nombre y codigo
+//sumar la duracion de todos los proyectos
+// agrupar los proyectos por proyectos
+using System;
 namespace ProyectosSenova
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int edad;
-            int puntaje = 0;
+            //int edad;
+            //int puntaje = 0;
 
-            Proyecto miProyecto = new Proyecto();
-            Proyecto miProyecto2 = new Proyecto();
+            //Proyecto miProyecto = new Proyecto();
+         
+            
+           // miProyecto.ImprimirProyecto(miProyecto3.Proyectos);
+            
+            //Proyecto miProyecto2 = new Proyecto();
             Proyecto miProyecto3 = new Proyecto();
-            Proyecto miProyecto4 = new Proyecto("Realidad aumentada",12540,"sistemas",10);
-            Proyecto miProyecto5 = new Proyecto("Talento Humano", 5);
-            Proyecto miProyecto6 = new Proyecto("Contabilidad", 6);
+            miProyecto3.IngresarProyecto();
+            Console.WriteLine("digite la ");
+            int x = int.Parse(Console.ReadLine());
+            miProyecto3.ObtenerMayores(x);
+            list<Proyecto> proyectos = new list<Proyecto>();
+          
+            //Proyecto miProyecto4 = new Proyecto("Realidad aumentada",12540,"sistemas",10);
+            //Proyecto miProyecto5 = new Proyecto("Talento Humano", 5);
+            //Proyecto miProyecto6 = new Proyecto("Contabilidad", 6);
 
 
             // miProyecto3.IngresarProyecto();
             // miProyecto3.ImprimirProyecto();
             //miProyecto4.ImprimirProyecto();
             //miProyecto5.ImprimirProyecto();
-            miProyecto6.ImprimirProyecto();
+            //miProyecto6.ImprimirProyecto();
 
 
 
