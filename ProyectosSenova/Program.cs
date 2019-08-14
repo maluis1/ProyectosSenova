@@ -24,10 +24,11 @@ namespace ProyectosSenova
             //Proyecto miProyecto2 = new Proyecto();
             Proyecto miProyecto3 = new Proyecto();
             miProyecto3.IngresarProyecto();
-            Console.WriteLine("digite la ");
-            int x = int.Parse(Console.ReadLine());
-            miProyecto3.ObtenerMayores(x);
+            //Console.WriteLine("digite el numero del codigo");
+            //int x = int.Parse(Console.ReadLine());
             list<Proyecto> proyectos = new list<Proyecto>();
+            miProyecto3.ObtenerMayores();
+            
           
             //Proyecto miProyecto4 = new Proyecto("Realidad aumentada",12540,"sistemas",10);
             //Proyecto miProyecto5 = new Proyecto("Talento Humano", 5);
